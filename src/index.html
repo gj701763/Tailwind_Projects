@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartUp</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body id="logo" class="right-0 overflow-x-hidden font-sans bg-gray-200 scroll-smooth scroll-px-0 text-gray-950">
+
+    <nav
+        class="flex fixed  justify-between right-0 overflow-hidden shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] left-0 z-10 top-0 lg:justify-between h-14  bg-white ">
+
+        <div class="flex items-center justify-center px-4 font-light hover:bg-gray-300">
+            <a href="#logo">LOGO</a>
+        </div>
+
+        <div class="hidden gap-1 font-light lg:flex ">
+            <div class="flex items-center justify-center px-4 hover:bg-gray-300">
+                <a class="uppercase" href="#about">About</a>
+            </div>
+            <div class="flex items-center justify-center gap-1 px-4 hover:bg-gray-300">
+                <i class="fa-solid fa-user-plus"></i>
+                <a class="uppercase" href="#team">Team</a>
+            </div>
+            <div class="flex items-center justify-center px-4 hover:bg-gray-300">
+                <img class="" src="/assets/icon1.svg" alt="">
+                <a class="uppercase" href="#work">Work</a>
+            </div>
+            <div class="flex items-center justify-center gap-1 px-4 hover:bg-gray-300">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <a class="uppercase" href="#pricing">pricing</a>
+            </div>
+            <div class="flex items-center justify-center gap-1 px-4 hover:bg-gray-300">
+                <i class="fa-solid fa-envelope"></i>
+                <a class="uppercase" href="#contact">contact</a>
+            </div>
+
+        </div>
+
+        <button class="mr-3 lg:hidden" onclick="handleMenu()">
+            <i class="text-gray-600 fa-solid fa-bars "></i>
+        </button>
+
+        <div id="nav-dialog" class="fixed inset-0 z-10 hidden p-3 bg-white lg:hidden">
+
+            <button class="p-2 lg:hidden" onclick="handleMenu()">
+                <i class="text-gray-600 fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="mt-6" onclick="handleMenu()">
+                <div class="flex items-center p-3 px-4 m-3 rounded-lg hover:bg-gray-100">
+                    <a class="uppercase" href="#about">About</a>
+                </div>
+                <div class="flex items-center gap-1 p-3 m-3 rounded-lg hover:bg-gray-100">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <a class="uppercase" href="#team">Team</a>
+                </div>
+                <div class="flex items-center p-3 m-3 rounded-lg hover:bg-gray-100">
+                    <img class="" src="/assets/icon1.svg" alt="">
+                    <a class="uppercase" href="#work">Work</a>
+                </div>
+                <div class="flex items-center gap-1 p-3 m-3 rounded-lg hover:bg-gray-100">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    <a class="uppercase" href="#pricing">pricing</a>
+                </div>
+                <div class="flex items-center gap-1 p-3 m-3 rounded-lg hover:bg-gray-100">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a class="uppercase" href="#contact">contact</a>
+                </div>
+
+
+            </div>
+            <div class="h-[1px] bg-gray-400"></div>
+        </div>
+
+
+    </nav>
+
+    <main class="relative w-full h-full">
+        <header class="w-auto h-screen text-white bg-center bg-cover " id="home"
+            style="background-image: url('/assets/asset1.jpg');">
+            <div
+                class="absolute inset-x-0 flex flex-col w-full h-screen pt-20 bg-black bg-opacity-20 lg:pt-48 lg:justify-between">
+                <div class="flex flex-col justify-start" style="padding:48px">
+                    <span class="text-[40px] lg:text-[60px]">Start something that matters</span><br>
+                    <span class="text-sm lg:text-lg">Stop wasting valuable time with projects that just isn't
+                        you.</span>
+                    <p class="mt-8 bg-white opacity-80 text-black w-fit px-5 py-3.5 hover:opacity-90"><a
+                            href="#about">Learn
+                            more and start today</a></p>
+                </div>
+                <div class=" opacity-40 text-gray-50" style="padding:24px 48px">
+                    <i class="cursor-pointer fa-brands fa-square-facebook hover:opacity-50"></i>
+                    <i class="cursor-pointer fa-brands fa-instagram hover:opacity-50"></i>
+                    <i class="cursor-pointer fa-brands fa-snapchat hover:opacity-50"></i>
+                    <i class="cursor-pointer fa-brands fa-pinterest hover:opacity-50"></i>
+                    <i class="cursor-pointer fa-brands fa-twitter hover:opacity-50"></i>
+                    <i class="cursor-pointer fa-brands fa-linkedin-in hover:opacity-50"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- About the company -->
+
+        <div id="about" class="flex flex-col items-center justify-center px-4 py-32" id="about">
+            <h3 class="text-xl font-normal text-center">ABOUT THE COMPANY</h3>
+            <p class="text-lg text-center opacity-60">Key features of our company</p>
+            <div class="container flex flex-col items-center gap-10 justify-evenly lg:flex-row lg:pl-10"
+                style="margin-top:64px">
+                <div class="flex flex-col items-center gap-5">
+                    <i class="text-6xl fa fa-desktop"></i>
+                    <p class="text-lg opacity-80">Responsive</p>
+                    <p class="font-light leading-8 text-center text-wrap">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit,
+                        sed do
+                        eiusmod tempor
+                        incididunt ut
+                        labore et dolore.</p>
+                </div>
+                <div class="flex flex-col items-center gap-5">
+                    <i class="text-6xl fa fa-heart"></i>
+                    <p class="text-lg opacity-80">Passion</p>
+                    <p class="font-light leading-8 text-center text-wrap">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore et dolore.</p>
+                </div>
+                <div class="flex flex-col items-center gap-5">
+                    <i class="text-6xl fa-regular fa-gem"></i>
+                    <p class="text-lg opacity-80">Design</p>
+                    <p class="font-light leading-8 text-center text-wrap">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore et dolore.</p>
+                </div>
+                <div class="flex flex-col items-center gap-5">
+                    <i class="text-6xl fa fa-cog"></i>
+                    <p class="text-lg opacity-80">Support</p>
+                    <p class="font-light leading-8 text-center text-wrap">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore et dolore.</p>
+                </div>
+            </div>
+        </div>
+        <!-- we know design -->
+        <div id="design" class="flex flex-col w-auto gap-56 bg-gray-100 lg:flex-row pb-28 pt-28">
+            <div class="flex flex-col items-center w-auto gap-3 pl-8 lg:items-start">
+                <h3 class="text-xl font-normal">We know design</h3>
+                <p class="text-wrap text-center lg:text-start mt-3 text-sm w-[300px] lg:w-[450px]">Lorem ipsum dolor
+                    sit
+                    amet,
+                    consectetur
+                    adipiscing
+                    elit,
+                    sed do
+                    eiusmod
+                    tempor incididunt ut labore et dolore.</p>
+                <a class="px-4 py-2 font-light text-white hover:bg-gray-300 hover:text-black bg-slate-950 w-fit"
+                    href="#"><i class="fa fa-th">&nbsp;</i>
+                    View Our
+                    Work</a>
+            </div>
+            <div class="flex items-center justify-center w-auto">
+                <img class="rounded-xl  w-[600px]" src="/assets/asset2.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- The Team -->
+        <div id="team" class="flex flex-col items-center justify-center w-auto py-32">
+            <h3 class="text-xl font-normal text-center">THE TEAM</h3>
+            <p class="mt-4 text-center ">The ones who runs this company</p>
+            <div class="flex flex-col justify-center gap-4 px-10 mt-14 lg:flex-row">
+                <div class="flex flex-col shadow-[0_3px_10px_rgb(0,0,0,0.2)]  bg-white w-auto ">
+                    <img class="w-auto" src="/assets/asset3.jpg" alt="">
+                    <h3 class="px-5 pt-5 text-2xl font-normal">John Doe</h3>
+                    <p class="px-5 pt-3 text-sm opacity-60">CEO & Founder</p>
+                    <p class="px-5 pt-3 text-lg font-light text-wrap w-80">Phasellus eget enim eu lectus faucibus
+                        vestibulum.
+                        Suspendisse
+                        sodales
+                        pellentesque
+                        elementum.
+                    </p>
+
+                    <a href="#"
+                        class="flex items-center justify-center h-10 gap-1 mx-5 mt-4 mb-4 bg-gray-200 hover:bg-gray-300">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p class="opacity-70">Contact</p>
+                    </a>
+                </div>
+                <div class="flex flex-col shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white w-fit ">
+                    <img class="w-auto" src="/assets/asset4.jpg" alt="">
+                    <h3 class="px-5 pt-5 text-2xl font-normal">Anja Doe</h3>
+                    <p class="px-5 pt-3 text-sm opacity-60">Art Director</p>
+                    <p class="px-5 pt-3 text-lg font-light text-wrap w-80">Phasellus eget enim eu lectus faucibus
+                        vestibulum.
+                        Suspendisse
+                        sodales
+                        pellentesque
+                        elementum.
+                    </p>
+
+                    <a href="#"
+                        class="flex items-center justify-center h-10 gap-1 mx-5 mt-4 mb-4 bg-gray-200 hover:bg-gray-300">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p class="opacity-70">Contact</p>
+                    </a>
+                </div>
+                <div class="flex flex-col shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white w-fit ">
+                    <img class="w-auto" src="/assets/asset5.jpg" alt="">
+                    <h3 class="px-5 pt-5 text-2xl font-normal">Mike Ross</h3>
+                    <p class="px-5 pt-3 text-sm opacity-60">Web Designer</p>
+                    <p class="px-5 pt-3 text-lg font-light text-wrap w-80">Phasellus eget enim eu lectus faucibus
+                        vestibulum.
+                        Suspendisse
+                        sodales
+                        pellentesque
+                        elementum.
+                    </p>
+
+                    <a href="#"
+                        class="flex items-center justify-center h-10 gap-1 mx-5 mt-4 mb-4 bg-gray-200 hover:bg-gray-300">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p class="opacity-70">Contact</p>
+                    </a>
+                </div>
+                <div class="flex flex-col shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-white w-fit ">
+                    <img class="w-auto" src="/assets/asset6.jpg" alt="">
+                    <h3 class="px-5 pt-5 text-2xl font-normal">Dan Star</h3>
+                    <p class="px-5 pt-3 text-sm opacity-60">Designer</p>
+                    <p class="px-5 pt-3 text-lg font-light text-wrap w-80">Phasellus eget enim eu lectus faucibus
+                        vestibulum.
+                        Suspendisse
+                        sodales
+                        pellentesque
+                        elementum.
+                    </p>
+
+                    <a href="#"
+                        class="flex items-center justify-center h-10 gap-1 mx-5 mt-4 mb-4 bg-gray-200 hover:bg-gray-300">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p class="opacity-70">Contact</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- stats -->
+        <div class="flex flex-col items-center bg-zinc-800 oldstyle-nums lg:flex-row h-52 text-slate-50 justify-evenly">
+            <div class="flex flex-col items-center">
+                <span class="text-2xl ">14+</span>
+                <span>Partners</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-2xl">55+</span>
+                <span>Project Done</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-2xl">89+</span>
+                <span>Happy Clients</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <span class="text-2xl">150+</span>
+                <span>Meetings</span>
+            </div>
+        </div>
+
+        <!-- Work -->
+        <div id="work" class="flex flex-col items-center justify-center w-auto py-32">
+            <h3 class="text-xl font-normal text-center">OUR WORK</h3>
+            <p class="mt-4 text-center ">What we've done for people</p>
+            <div class="flex flex-col justify-between w-auto gap-5 cursor-pointer lg:flex-row mt-14">
+                <div class="flex items-center justify-center">
+                    <img class="w-auto hover:opacity-50 " src="/assets/asset7.jpg" alt="">
+                </div>
+                <div>
+                    <img class="w-auto hover:opacity-50" src="/assets/asset8.jpg" alt="">
+                </div>
+                <div>
+                    <img class="w-auto hover:opacity-50" src="/assets/asset9.jpg" alt="">
+                </div>
+                <div>
+                    <img class="w-auto hover:opacity-50" src="/assets/asset10.jpg" alt="">
+                </div>
+
+            </div>
+            <div class="flex flex-col justify-between w-auto gap-5 mt-5 cursor-pointer lg:flex-row">
+                <div class="flex items-center justify-center">
+                    <img class="w-auto hover:opacity-50" src="/assets/asset11.jpg" alt="">
+                </div>
+                <div>
+                    <img class="w-auto hover:opacity-50" src="/assets/asset12.jpg" alt="">
+                </div>
+                <div>
+                    <img class="w-auto hover:opacity-50" src="/assets/asset13.jpg" alt="">
+                </div>
+                <div>
+                    <img class="w-auto hover:opacity-50" src="/assets/asset14.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- skills -->
+        <div id="design" class="flex flex-col gap-20 pt-20 pb-16 bg-gray-100 lg:gap-56 lg:flex-row">
+            <div class="flex flex-col items-center gap-3 pl-8">
+                <h3 class="text-xl font-normal">Our Skills.</h3>
+                <p class="text-wrap mt-3 text-sm w-[300px] lg:w-[450px]">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing
+                    elit,
+                    sed do
+                    eiusmod
+                    tempor incididunt ut labore et dolore.
+                </p>
+                <p class="text-wrap mt-3 text-sm w-[300px] lg:w-[450px]">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing
+                    elit,
+                    sed do
+                    eiusmod
+                    tempor incididunt ut labore et dolore.
+                </p>
+            </div>
+            <div class="flex flex-col items-center gap-5 pl-5 overflow-hidden ">
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center gap-5 ">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>Photography</span>
+                    </div>
+                    <div class="bg-slate-400 flex justify-items-start w-[400px] lg:w-[600px]">
+                        <span class="bg-stone-600 oldstyle-nums flex justify-center w-[90%] text-white">90%</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center gap-5 ">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span>Web Design</span>
+                    </div>
+                    <div class="bg-slate-400 flex justify-items-start w-[400px] lg:w-[600px]">
+                        <span class="bg-stone-600 flex justify-center w-[85%] text-white">85%</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center gap-5 ">
+                        <i class="fa-solid fa-photo"></i>
+                        <span>Photoshop</span>
+                    </div>
+                    <div class="bg-slate-400 flex justify-items-start w-[400px] lg:w-[600px]">
+                        <span class="bg-stone-600 flex justify-center w-[75%] text-white">75%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing -->
+        <div id="pricing" class="flex flex-col items-center justify-center bg-stone-600 py-28">
+            <h3 class="text-xl font-normal text-center text-white">PRICING</h3>
+            <p class="mt-4 text-lg text-center text-white opacity-60 ">Choose a pricing plan that fits your needs.</p>
+
+            <div
+                class="container flex flex-col items-center w-auto gap-10 justify-evenly oldstyle-nums mt-9 lg:flex-row">
+                <div
+                    class="shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-10/12  lg:w-96 lg:h-fit lg:transition ease-in-out delay-150 hover:-translate-y-1 lg:hover:scale-110 lg:duration-200 ">
+                    <ul class="bg-white ">
+                        <li class="py-5 text-3xl text-center text-white bg-black lg:py-10">Basic</li>
+                        <li class="py-4 text-center "><b>10GB</b>Storage</li>
+                        <hr>
+                        <li class="py-4 text-center"><b>10</b>Emails</li>
+                        <hr>
+                        <li class="py-4 text-center"><b>10</b>Domains</li>
+                        <hr>
+                        <li class="py-4 text-center"><b>Endless</b>Support</li>
+                        <hr>
+                        <li class="py-2 text-center lg:px-40 lg:py-4">
+                            <h3 class="text-lg font-bold text-center">$ 10</h3>
+                            <p class="text-lg opacity-70">per month</p>
+                        </li>
+                        <hr>
+                        <li class="flex items-center justify-center py-5 text-center bg-slate-200">
+                            <button class="px-5 py-3 text-white bg-black hover:shadow-2xl ">Sing Up</button>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-10/12 lg:w-96 mt-2 lg:transition ease-in-out delay-150 hover:-translate-y-1 lg:hover:scale-110 lg:duration-200 h-fit">
+                    <ul class="bg-white ">
+                        <li class="text-3xl text-center text-white bg-red-500 py-7 lg:py-14">Pro</li>
+                        <li class="py-4 text-center "><b>25GB</b>Storage</li>
+                        <hr>
+                        <li class="py-4 text-center"><b>25</b>Emails</li>
+                        <hr>
+                        <li class="py-4 text-center"><b>25</b>Domains</li>
+                        <hr>
+                        <li class="py-4 text-center"><b>Endless</b>Support</li>
+                        <hr>
+                        <li class="py-2 text-center lg:px-40 lg:py-4">
+                            <h3 class="text-lg font-bold">$ 25</h3>
+                            <p class="text-lg opacity-70">per month</p>
+                        </li>
+                        <hr>
+                        <li class="flex items-center justify-center py-5 text-center bg-slate-200">
+                            <button class="px-5 py-3 text-white bg-black ">Sing Up</button>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-10/12 lg:w-96  h-fit lg:transition ease-in-out delay-150 hover:-translate-y-1 lg:hover:scale-110 lg:duration-200 ">
+                    <ul class="text-justify bg-white">
+                        <li class="py-5 text-3xl text-center text-white bg-black lg:py-10">Premium</li>
+                        <li class="py-4 text-center "><b>50GB</b>Storage</li>
+                        <hr>
+                        <li class="py-4 text-center"><b>50</b>Emails</li>
+                        <hr>
+                        <li class="py-4 text-center"><b>50</b>Domains</li>
+                        <hr>
+                        <li class="py-4 text-center"><b>Endless</b>Support</li>
+                        <hr>
+                        <li class="px-40 py-4 text-nowrap">
+                            <h3 class="text-lg font-bold">$ 50</h3>
+                            <p class="text-lg opacity-70">per month</p>
+                        </li>
+                        <hr>
+                        <li class="flex items-center justify-center py-5 text-center bg-slate-200">
+                            <button class="px-5 py-3 text-white bg-black hover:shadow-2xl ">Sing Up</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div id="contact" class="flex flex-col lg:items-center py-28">
+            <h3 class="text-xl font-normal text-center">CONTACT</h3>
+            <p class="mt-4 text-lg text-center ">Lets get in touch. Send us a message:</p>
+            <div class="gap-10 p-10 mt-5 lg:flex">
+                <div class="flex flex-col gap-3 pl-3 lg:items-start">
+                    <p class="space-x-6">
+                        <i class="text-3xl fa-solid fa-location-dot"></i>
+                        <span>Chicago, US</span>
+                    </p>
+                    <p class="space-x-6 ">
+                        <i class="text-3xl fa-solid fa-phone"></i>
+                        <span>Phone: +00 151515</span>
+                    </p>
+                    <p class="space-x-6">
+                        <i class="text-3xl fa-solid fa-envelope"></i>
+                        <span> Email: mail@mail.com</span>
+                    </p>
+
+                    <form class="flex flex-col gap-4 lg:w-96" action="">
+                        <p><input class="w-full px-2 py-2 border-2 border-gray-400" type="text" name="text" id=""
+                                placeholder="Name">
+                        </p>
+                        <p><input class="w-full px-2 py-2 border-2 border-gray-400" type="text" name="text" id=""
+                                placeholder="Email">
+                        </p>
+                        <p><input class="w-full px-2 py-2 border-2 border-gray-400" type="text" name="text" id=""
+                                placeholder="Subject">
+                        </p>
+                        <p><input class="w-full px-2 py-2 border-2 border-gray-400" type="text" name="text" id=""
+                                placeholder="Message">
+                        </p>
+                        <a class="px-4 py-2 font-light text-white hover:bg-gray-400 hover:font-semibold hover:text-black bg-slate-950 w-fit"
+                            href="#"><i class="fa-solid fa-paper-plane"></i>
+                            SEND MESSAGE</a>
+                    </form>
+                </div>
+
+                <div class="hidden lg:flex">
+                    <img class="w-fit rounded-b-xl" src="/assets/asset16.jpg" alt="">
+
+                </div>
+
+            </div>
+            <img class="mt-10" src="/assets/asset15.jpg" alt="">
+        </div>
+    </main>
+
+    <footer class="flex flex-col items-center justify-center p-10 bg-black">
+        <a class="px-4 py-2 font-light text-black hover:bg-gray-400 hover:text-white lg:font-normal bg-slate-100 w-fit"
+            href="#"><i class="px-3 fa-solid fa-arrow-up"></i>To the top
+        </a>
+        <div class=" text-gray-50" style="padding:24px 48px">
+            <i
+                class="text-2xl cursor-pointer fa-brands fa-square-facebook hover:opacity-60 text-2xlhover:opacity-60"></i>
+            <i class="text-2xl cursor-pointer fa-brands fa-instagram hover:opacity-60"></i>
+            <i class="text-2xl cursor-pointer fa-brands fa-snapchat hover:opacity-60"></i>
+            <i class="text-2xl cursor-pointer fa-brands fa-pinterest hover:opacity-60"></i>
+            <i class="text-2xl cursor-pointer fa-brands fa-twitter hover:opacity-60"></i>
+            <i class="text-2xl cursor-pointer fa-brands fa-linkedin-in hover:opacity-60"></i>
+        </div>
+        <p class="text-white">This website was made From Gajanan Jadhav. Make your own free website today!</p>
+        <a class="p-2 px-4 mt-3 text-black bg-white rounded-full " href="#logo">Start now</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
